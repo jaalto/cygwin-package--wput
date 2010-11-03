@@ -46,36 +46,28 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack wput-0.6.1-1-src.tar.bz2
+  unpack wput-0.6.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wput*.sh all
 
 This will create:
-  wput-0.6.1-1.tar.bz2
-  wput-0.6.1-1-src.tar.bz2
+  wput-0.6.2-1.tar.bz2
+  wput-0.6.2-1-src.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-/usr/bin/wput.exe
-/usr/share/doc/Cygwin/wput-0.6.1.README
-/usr/share/doc/wput-0.6.1/COPYING
-/usr/share/doc/wput-0.6.1/ChangeLog
-/usr/share/doc/wput-0.6.1/TODO
-/usr/share/doc/wput-0.6.1/USAGE.examples
-/usr/share/doc/wput-0.6.1/USAGE.resumehandling
-/usr/share/doc/wput-0.6.1/USAGE.urlhandling
-/usr/share/doc/wput-0.6.1/passwordfile
-/usr/share/doc/wput-0.6.1/wputrc
-/usr/share/man/man1/wput.1.gz
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
 - Makefile: rewrote install
+
+----- version 0.6.2-1 -----
+- New upstream release 2010-11-03 Jari Aalto
 
 ----- version 0.6.1-2 -----
 - The original package's doc/wput.1.gz had crc errors. Copied new
@@ -86,4 +78,4 @@ Port Notes:
 - This port is based on Debian source
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2010 Jari Aalto; Licenced under GPL v2 or later
