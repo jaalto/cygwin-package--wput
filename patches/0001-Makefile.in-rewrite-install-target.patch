@@ -1,18 +1,21 @@
-From a35242420501c489888ed0b8a594104dae410b83 Mon Sep 17 00:00:00 2001
+From 717a42bf6da73e6dac46f696a5d2adf239ae4505 Mon Sep 17 00:00:00 2001
 From: Jari Aalto <jari.aalto@cante.net>
-Date: Mon, 3 Dec 2007 20:03:15 +0200
+Date: Wed, 3 Nov 2010 23:18:58 +0200
 Subject: [PATCH] Makefile.in: rewrite install target
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
- Makefile.in |   42 ++++++++++++++++++++++++++++++++----------
- 1 files changed, 32 insertions(+), 10 deletions(-)
+ Makefile.in |   39 +++++++++++++++++++++++++++++++--------
+ 1 files changed, 31 insertions(+), 8 deletions(-)
 
 diff --git a/Makefile.in b/Makefile.in
-index 3785448..68c9ad8 100644
+index 6756cd2..7aac615 100644
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -1,30 +1,52 @@
+@@ -1,10 +1,23 @@
  #wput makefile
 -PACKAGE     = @PACKAGE@
 -prefix      = @prefix@
@@ -32,7 +35,7 @@ index 3785448..68c9ad8 100644
 +exec_prefix     = $(prefix)
 +man_prefix      = $(prefix)/share
 +
-+INSTALL = /usr/bin/install
++INSTALL 	= /usr/bin/install
 +INSTALL_BIN     = $(INSTALL) -m 755
 +INSTALL_DATA    = $(INSTALL) -m 644
 +INSTALL_OBJS    = wput
@@ -42,33 +45,25 @@ index 3785448..68c9ad8 100644
  
  all clean:
  	cd po && $(MAKE) $(MAKEDEFS) $@
- 	cd src && $(MAKE) $(MAKEDEFS) $@
--	
-+
+@@ -14,7 +27,7 @@ all clean:
  win-clean:
  	cd src && $(MAKE) $(MAKEDEFS) $@
  
 -install: all
 +install-old: all
  	cd po && $(MAKE) $(MAKEDEFS) $@
- 	install -m0755 wput $(bindir)
- 	install -m0644 doc/wput.1.gz $(mandir)
- 	@echo "----------------"
- 	@echo "Wput installed. See 'wput -h' or 'man wput' for usage information."
- 	@echo "Further documentation is located in the doc/USAGE.* files."
--	@echo 
-+	@echo
- 	@echo "Wput is not perfect, so please report any bugs you notice (see BUGS-section"
- 	@echo "in the manpage)."
- 	@echo "----------------"
- uninstall:
- 	rm -f $(bindir)/wput
+ 	mkdir -p $(bindir) 
+ 	mkdir -p $(mandir) 
+@@ -35,4 +48,14 @@ uninstall:
+ 	rm -f $(bindir)/wdel
  	rm -f $(mandir)/wput.1.gz
+ 	rm -f $(mandir)/wdel.1.gz
 -	
 +
 +install-bin:
 +	$(INSTALL_BIN) -d $(BINDIR)
 +	$(INSTALL_BIN) -s $(INSTALL_OBJS) $(BINDIR)
++	cd $(BINDIR) && ln -s wput wdel
 +
 +install-man:
 +	$(INSTALL_BIN) -d $(MANDIR)
@@ -76,5 +71,5 @@ index 3785448..68c9ad8 100644
 +
 +install: install-bin install-man
 -- 
-1.5.3.GIT
+1.7.2.3
 
