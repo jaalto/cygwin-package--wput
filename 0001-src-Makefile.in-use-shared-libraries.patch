@@ -1,0 +1,36 @@
+From 63624fec11793b40f334d94035395e6546cbac19 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Wed, 5 Dec 2007 00:30:53 +0200
+Subject: [PATCH] src/Makefile.in: use shared libraries
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ src/Makefile.in |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index e7c4c43..2630365 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -6,7 +6,8 @@ bindir=@bindir@
+ localedir=$(prefix)/share/locale
+ CC=@CC@
+ CFLAGS= @CFLAGS@ -DLOCALEDIR=\"$(localedir)\" @GNUTLS_CFLAGS@
+-LIBS=@LIBINTL@ @LIBS@ @GNUTLS_LIBS@
++#LIBS=@LIBINTL@ @LIBS@ @GNUTLS_LIBS@
++LIBS=-lintl -liconv
+ EXE=../wput
+ GETOPT=@GETOPT@
+ MEMDBG=@MEMDBG@
+@@ -23,7 +24,7 @@ ftplib.o: socketlib.h ftplib.h
+ ftp-ls.o: ftp.h wget.h url.h
+ 
+ wput:   $(OBJ)
+-	$(CC) -o $(EXE) $(OBJ) $(LIBS)
++	$(CC) -o $(EXE) $(OBJ) $(LIBS) $(LDFLAGS)
+ clean:
+ 	rm -f *.o *~ *.bak ../wput getopt/*.o
+ win-clean: clean
+-- 
+1.5.3.GIT
+

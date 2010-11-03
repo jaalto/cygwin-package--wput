@@ -1,0 +1,6 @@
+sdesc: "A tiny wget-like ftp-client for uploading files"
+ldesc: "A tiny ftp-client, that uploads files or directories
+to a remote ftp-server. Main features are: resuming, timestamping,
+wget-like interface, proxy-support and speed-limit."
+category: Web
+requires: cygwin libintl8
