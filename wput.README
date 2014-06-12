@@ -8,13 +8,10 @@ remote ftp-server. Main features are: resuming, timestamping,
 wget-like interface, proxy-support and speed-limit.
 
 Runtime requirements:
-  cygwin
-  libiconv2
   libintl8
 
 Build requirements:
-  cygwin
-  libiconv2
+  quilt
   libintl8
 
 Canonical homepage:
@@ -46,15 +43,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack wput-0.6.2-1-src.tar.bz2
+  unpack wput-0.6.2+git20130413-1-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wput*.sh all
 
 This will create:
-  wput-0.6.2-1.tar.bz2
-  wput-0.6.2-1-src.tar.bz2
+  wput-0.6.2+git20130413-1.tar.xz
+  wput-0.6.2+git20130413-1-src.tar.xz
 
 -------------------------------------------
 
@@ -65,6 +62,9 @@ Files included in the binary distro:
 
 Port Notes:
 - Makefile: rewrote install
+
+----- version 0.6.2+git20130413-1 -----
+- New upstream release 2014-06-12 Jari Aalto
 
 ----- version 0.6.2-1 -----
 - New upstream release 2010-11-03 Jari Aalto
@@ -78,4 +78,4 @@ Port Notes:
 - This port is based on Debian source
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2010 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2014 Jari Aalto; Licenced under GPL v2 or later
