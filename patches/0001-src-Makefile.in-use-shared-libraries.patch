@@ -6,10 +6,8 @@ Subject: [PATCH] src/Makefile.in: use shared libraries
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
  src/Makefile.in |    5 +++--
- 1 files changed, 3 insertions(+), 2 deletions(-)
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
-diff --git a/src/Makefile.in b/src/Makefile.in
-index e7c4c43..2630365 100644
 --- a/src/Makefile.in
 +++ b/src/Makefile.in
 @@ -6,7 +6,8 @@ bindir=@bindir@
@@ -29,8 +27,5 @@ index e7c4c43..2630365 100644
 -	$(CC) -o $(EXE) $(OBJ) $(LIBS)
 +	$(CC) -o $(EXE) $(OBJ) $(LIBS) $(LDFLAGS)
  clean:
- 	rm -f *.o *~ *.bak ../wput getopt/*.o
+ 	rm -f *.o *~ *.bak ../wput ../wdel getopt/*.o
  win-clean: clean
--- 
-1.5.3.GIT
-
