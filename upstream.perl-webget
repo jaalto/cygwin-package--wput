@@ -1,2 +1,2 @@
 tag1: wput
-  http://packages.debian.org/unstable/wput pregexp:orig.tar.gz file:wput_0.6.orig.tar.gz new: x:
+  http://packages.debian.org/unstable/wput pregexp:orig.tar.bz2 file:wput_0.6.orig.tar.bz2 new: x:
