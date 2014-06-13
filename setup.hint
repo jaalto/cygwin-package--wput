@@ -3,4 +3,4 @@ ldesc: "A tiny ftp-client, that uploads files or directories
 to a remote ftp-server. Main features are: resuming, timestamping,
 wget-like interface, proxy-support and speed-limit."
 category: Web
-requires: libintl8
+requires: libintl8 libgcc1
