@@ -1,0 +1,69 @@
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Tue, 15 Dec 2009 21:19:20 +0200
+Subject: [PATCH] doc/wput.1: SH and typo fixes
+
+--- a/doc/wput.1
++++ b/doc/wput.1
+@@ -49,7 +49,7 @@
+ local file's location. e.g. using wput ftp://host/directory/path/file, Wput
+ will look out for /directory/path/file. If not found, Wput looks for ./directory/path/file, ./path/file and ./file.
+ .SH "OPTIONS"
+-.Sh "Basic Startup Options"
++.SH "Basic Startup Options"
+ .IP "\fB\-V\fR" 4
+ .IX Item "-V"
+ .PD 0
+@@ -72,7 +72,7 @@
+ .PD
+ Go to background immediately after startup.  If no output file is given,
+ wput will redirect its output to "./wputlog"
+-.Sh "Logging and Input File Options"
++.SH "Logging and Input File Options"
+ .IX Subsection "Logging and Input File Options"
+ .IP "\fB\-o\fR \fIlogfile\fR" 4
+ .IX Item "-o logfile"
+@@ -153,7 +153,7 @@
+ .PD
+ This option causes Wput to snip \fIpath\fR from all input\-files when they are
+ connected to the URL. wput /usr/share/doc.tgz ftp://host/ would create
+-ftp://host//usr/share/doc.tgz, whereas specifing /usr/share/ as basename will
++ftp://host//usr/share/doc.tgz, whereas specifying /usr/share/ as basename will
+ result in ftp://host/doc.tgz being created.
+ .IP "\fB\-I\fR \fIcommand\fR" 4
+ .IX Item "-I command"
+@@ -168,7 +168,7 @@
+ .IP "" 4
+ .PD
+ The hostname is only supplied if the ip cannot be resolved.
+-If you do not want these parameters to confuse the programm from which you read
++If you do not want these parameters to confuse the program from which you read
+ the contents, use something like '\-I "cat file; echo > /dev/null"' so that these
+ parameters are passed to echo and to /dev/null afterwards.
+ Since the progressbar is not capable of handling unknown filesizes, the filesize
+@@ -180,7 +180,7 @@
+ .IX Item "--remove-source-files"
+ .PD
+ Unlinks/deletes files that have been successfully transmitted.
+-.Sh "Upload Options"
++.SH "Upload Options"
+ .IX Subsection "Upload Options"
+ .IP "\fB\-\-bind\-address=\fR\fI\s-1ADDRESS\s0\fR" 4
+ .IX Item "--bind-address=ADDRESS"
+@@ -276,7 +276,7 @@
+ .IP "\fB\-\-proxy-pass=\fR\fIPASS\fR" 4
+ .IX Item "--proxy-pass=PASS"
+ Specifies the password to use for the proxy.
+-.Sh "FTP Options"
++.SH "FTP Options"
+ .IX Subsection "FTP Options"
+ .IP "\fB\-p\fR" 4
+ .IX Item "-p"
+@@ -295,7 +295,7 @@
+ .IX Item "--ascii"
+ Wput automatically determines which transfer\-format to use, by looking at
+ the file-extensions. Certain files are recognized as ASCII. These are:
+-txt, c, java, cpp, sh, f, f90, f77, f95, bas", pro, csh, ksh, conf, htm, html, php, pl, cgi, inf, js, asp, bat, cfm, css, dhtml, diz, h, hpp, ini, mak, nfo, shtml, shtm, tcl, pas
++txt, c, java, cpp, sh, f, f90, f77, f95, bas, pro, csh, ksh, conf, htm, html, php, pl, cgi, inf, js, asp, bat, cfm, css, dhtml, diz, h, hpp, ini, mak, nfo, shtml, shtm, tcl, pas
+ .PD
+ Specifying this flag forces Wput to use ASCII mode file transfers.
+ .IP "\fB\-B\fR" 4
