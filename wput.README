@@ -43,15 +43,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack wput-0.6.2+git20130413-1-src.tar.bz2
+  unpack wput-0.6.2+git20130413-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./wput*.sh all
 
 This will create:
-  wput-0.6.2+git20130413-1.tar.xz
-  wput-0.6.2+git20130413-1-src.tar.xz
+  wput-0.6.2+git20130413-2.tar.xz
+  wput-0.6.2+git20130413-2-src.tar.xz
 
 -------------------------------------------
 
@@ -62,6 +62,10 @@ Files included in the binary distro:
 
 Port Notes:
 - Makefile: rewrote install
+
+----- version 0.6.2+git20130413-2 -----
+- New release 2014-06-13 Jari Aalto
+- Include debian patches
 
 ----- version 0.6.2+git20130413-1 -----
 - New upstream release 2014-06-12 Jari Aalto

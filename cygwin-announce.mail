@@ -1,5 +1,5 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: wput 0.6.2+git20130413-1 -- A tiny wget-like ftp-client for uploading files
+Subject: Updated: wput 0.6.2+git20130413-2 -- A tiny wget-like ftp-client for uploading files
 --text follows this line--
 
 
@@ -17,7 +17,7 @@ wget-like interface, proxy-support and speed-limit.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-Correct corrupted manual page (gzip CRC).
+Include Debian patches.
 
 http://wput.svn.sourceforge.net/viewvc/wput/trunk/wput/ChangeLog?revision=HEAD&view=markup
 
